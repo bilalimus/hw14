@@ -1,4 +1,11 @@
 .list{
+    width: 600px;
     border: 1px solid green;
     margin-top: 10px;
+    background-color: #0d858e;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: 0.5px 1px 3px 1px black;
 }

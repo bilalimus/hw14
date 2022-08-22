@@ -1,4 +1,5 @@
 import { Component } from "react";
+import classes from './Add.module.css'
 
 class Add extends Component {
     constructor(){
@@ -23,10 +24,10 @@ class Add extends Component {
         this.setState({inputValue: ''})
     }
     return (
-      <>
+      <div className={classes.add}>
         <input onChange={onChangeHandler} type="text" value={this.state.inputValue}/>
-        <button onClick={addClickHandler}>add</button>
-      </>
+        <button onClick={addClickHandler}>ADD</button>
+      </div>
     );
   }
 }

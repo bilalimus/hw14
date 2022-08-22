@@ -1,0 +1,23 @@
+.add{
+    width: 500px;
+    height: 100px;
+    background-color: #0f9f60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0.5px 1px 3px 1px black;
+}
+.add button {
+    background-color: #999933;
+    margin-left: 10px;
+    width: 70px;
+    border-radius: 7px;
+    border: 2px solid #0d858e;
+}
+.add input {
+    border-radius: 7px;
+    border: 2px solid #0d858e;
+    background-color: #669999;
+    outline-color: #cc9933;
+}

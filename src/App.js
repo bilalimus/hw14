@@ -7,10 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      data: [
-        { id: 1, text: "Some text" },
-        { id: 2, text: "Some text2" },
-      ],
+      data: [],
     };
   }
   render() {
