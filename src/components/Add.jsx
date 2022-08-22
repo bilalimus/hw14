@@ -7,15 +7,20 @@ class Add extends Component {
     }
   render() {
     const onChangeHandler = (e) => {
-        console.log(e.target.value);
+        this.setState(() => {
+            return {
+                inputValue: e.target.value 
+            }
+        })
     }
 
     const addClickHandler = () => {
         let newData = {
-            id: 3,
-            text: 'Some text 3'
+            id: Math.random(),
+            text: this.state.inputValue
         }
         this.props.addHandler(newData)
+        this.setState({inputValue: ''})
     }
     return (
       <>

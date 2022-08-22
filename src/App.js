@@ -15,7 +15,11 @@ class App extends Component {
   }
   render() {
     const addHandler = (newData) => {
-      console.log(newData);
+      this.setState((prevState) => {
+        return {
+          data: [...prevState.data, newData]
+        }
+      })
     }
     return (
       <div className="App">
