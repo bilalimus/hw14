@@ -17,15 +17,29 @@ class App extends Component {
     const addHandler = (newData) => {
       this.setState((prevState) => {
         return {
-          data: [...prevState.data, newData]
-        }
-      })
-    }
+          data: [...prevState.data, newData],
+        };
+      });
+    };
+    const deleteHandler = (clickedID) => {
+      this.setState((prevState) => {
+        return {
+          data: prevState.data.filter((el) => el.id !== clickedID),
+        };
+      });
+    };
     return (
       <div className="App">
-        <Add addHandler={addHandler}/>
+        <Add addHandler={addHandler} />
         {this.state.data.map((el) => {
-          return <List id={el.id} text={el.text} key={el.id}/>;
+          return (
+            <List
+              deleteHandler={deleteHandler}
+              id={el.id}
+              text={el.text}
+              key={el.id}
+            />
+          );
         })}
       </div>
     );
